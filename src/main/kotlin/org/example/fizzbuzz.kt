@@ -3,12 +3,14 @@ package org.example
 class FizzBuzz {
   fun run(size: Int): List<String> {
     return (1..size).map { 
-      when {
-        it % 15 == 0 -> "FizzBuzz"
-        it % 3 == 0 ->  "Fizz"
-        it % 5 == 0 -> "Buzz"
-        else -> it.toString()
-      }
+      convertNumber(it)
     }
+  }
+
+  private fun convertNumber(int: Int): String {
+    if (int % 15 == 0) { return "FizzBuzz" }
+    if (int % 3 == 0) { return "Fizz" }
+    if (int % 5 == 0) { return "Buzz" }
+    return int.toString()
   }
 }
