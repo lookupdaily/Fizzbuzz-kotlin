@@ -28,4 +28,9 @@ class FizzBuzzTest {
     val output = fizzBuzz.run(size = 6)[5]
     assertEquals("Fizz",output)
    }
+
+  @Test fun `multiples of 5 are Buzz`() {
+    val output = fizzBuzz.run(size = 10)[9]
+    assertEquals("Buzz",output)
+  }
 }
