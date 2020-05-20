@@ -33,4 +33,9 @@ class FizzBuzzTest {
     val output = fizzBuzz.run(size = 10)[9]
     assertEquals("Buzz",output)
   }
+
+  @Test fun `multiples of 3 and 5 are FizzBuzz`() {
+    val output = fizzBuzz.run(size = 15)[14]
+    assertEquals("FizzBuzz",output)
+  }
 }
