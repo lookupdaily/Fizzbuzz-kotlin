@@ -5,7 +5,7 @@ class FizzBuzz {
     return (1..size).map { 
       when {
         it % 3 == 0 ->  "Fizz"
-        it == 5 -> "Buzz"
+        it % 5 == 0 -> "Buzz"
         else -> it.toString()
       }
     }
