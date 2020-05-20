@@ -22,4 +22,10 @@ class FizzBuzzTest {
       listOf("1","2","Fizz","4","Buzz"),
       output
     )
+  }
+
+  @Test fun `multiples of 3 are Fizz`() {
+    val output = fizzBuzz.run(size = 6)[5]
+    assertEquals("Fizz",output)
+   }
 }
