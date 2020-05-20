@@ -7,12 +7,19 @@ import org.junit.Test
 class FizzBuzzTest {
   private val fizzBuzz = FizzBuzz()
   
-  @Test fun belowFizz() {
+  @Test fun `simple numbers`() {
     val output = fizzBuzz.run(size = 2)
     assertEquals(listOf("1","2"),output)
   }
-  @Test fun threeIsFizz() {
+  @Test fun `three is Fizz`() {
     val output = fizzBuzz.run(size = 3)
     assertEquals(listOf("1","2","Fizz"),output)
   }
+
+  @Test fun `five is Buzz`() {
+    val output = fizzBuzz.run(size = 5)
+    assertEquals(
+      listOf("1","2","Fizz","4","Buzz"),
+      output
+    )
 }
